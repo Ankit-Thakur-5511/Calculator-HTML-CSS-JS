@@ -1,4 +1,4 @@
-let screen = document.querySelector('.screen'); // Use querySelector to get the single element
+let screen = document.querySelector('.screen'); 
 let btn = document.querySelectorAll('button');
 
 let string = '';
@@ -10,13 +10,13 @@ arr.forEach(button => {
                 string = eval(string);
                 screen.value = string;
             } catch {
-                screen.value = 'Error'; // Handle any errors
+                screen.value = 'Error'; 
             }
         } else if (e.target.innerHTML === 'AC') {
             string = '';
             screen.value = string;
-        } else if (e.target.innerHTML === 'DEL') { // Fix the comparison string
-            string = string.slice(0, -1); // Correctly remove the last character
+        } else if (e.target.innerHTML === 'DEL') { 
+            string = string.slice(0, -1); 
             screen.value = string;
         } else {
             string += e.target.innerHTML;
